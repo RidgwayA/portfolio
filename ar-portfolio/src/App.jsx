@@ -6,6 +6,7 @@ function App() {
     // **TODO** Fix fonts maybe something fancy
 <main className='font-body'>
   <NavbarMain/>
+  {/* <HeroMain/> */}
 </main>
   )
 }
