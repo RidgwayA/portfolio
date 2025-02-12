@@ -29,7 +29,9 @@
   --font-fancy: "Estonia", "serif";
 
 /* Shadow doesnt work */
-  --shadow-myshadow: '0px 0px 40px 0px rgba(94, 206, 220, 0.5)'
+  --shadow-myshadow: 0px 0px 40px 0px rgba(94, 206, 220, 0.5);
+  --shadow-bgShadow: 10px 10px 200px 150px rgba(94, 206, 220, 0.5);
+  --shadow-bgShadow2: 10px 10px 200px 150px rgba(240, 169, 79, 0.5);
 
   --breakpoint-*: initial;
   --breakpoint-sm: 350px;
@@ -40,6 +42,25 @@
 
 }
 
-body{
+body {
   @apply bg-prussianBlue;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade {
+  animation: fade 1s ease-in-out;
 }

@@ -1,12 +1,16 @@
-import './App.css'
+// import './App.css'
 import NavbarMain from './componets/navbar/NavbarMain'
+import HeroMain from './componets/heroSection/HeroMain'
+import HeroBackground from './componets/heroSection/HeroBackground'
+import HeroFooter from './componets/heroSection/HeroFooter'
 
 function App() {
   return (
-    // **TODO** Fix fonts maybe something fancy
 <main className='font-body'>
   <NavbarMain/>
-  {/* <HeroMain/> */}
+  <HeroMain/>
+  <HeroBackground/>
+  <HeroFooter/>
 </main>
   )
 }
