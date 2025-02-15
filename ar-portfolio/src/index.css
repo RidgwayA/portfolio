@@ -20,7 +20,8 @@
   --color-darkGrey: #3f4441;
 
   /* MY COLORS */
-  --color-black: #001219;
+  --color-richblack: #001219;
+  --color-black: #000000;
   --color-prussianBlue: #002B3C;
 
 /* **TODO** Fix fonts something fancy for name */
@@ -43,7 +44,7 @@
 }
 
 body {
-  @apply bg-prussianBlue;
+  @apply bg-black;
 }
 
 @keyframes fade {
