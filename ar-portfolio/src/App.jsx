@@ -7,6 +7,7 @@ import AboutMeMain from './componets/aboutMeSection/AboutMeMain'
 import SkillMain from './componets/skillSection/SkillMain'
 import ExperienceMain from './componets/experienceSection/ExperienceMain'
 import ProjectsMain from './componets/projectsSection/ProjectsMain'
+import ContactMain from './componets/contactSection/ContactMain'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
   <HeroFooter/>
   <ProjectsMain/>
   <HeroFooter/>
+  <ContactMain/>
 </main>
   )
 }
