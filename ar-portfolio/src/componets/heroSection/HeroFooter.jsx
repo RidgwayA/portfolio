@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-const items = ["Quick Learner", "Team Player", "Detail Oriented"];
+const items = ["Quick Learner", "Team Player", "Detail Oriented", "Hard Worker", "Creative", "Problem Solver"];
 
 function HeroFooter() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screenSize, setScreenSize] = useState("large");
-    // TODO Might need to update for mobile screens.
-    // Detect screen size and update state correctly
+
+  // Detect screen size
   useEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
@@ -19,40 +19,49 @@ function HeroFooter() {
       }
     };
 
-    updateScreenSize(); 
+    updateScreenSize();
     window.addEventListener("resize", updateScreenSize);
     return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
-  // Cycle through items every 3 seconds for small & medium screens
+  // Cycle through items every 3 seconds
   useEffect(() => {
-    if (screenSize === "large") return; // No cycling on large screens
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [screenSize]);
+  }, []);
 
   return (
     <div className="w-full border-y bg-black/80 border-white text-white uppercase py-8 flex items-center text-center px-4">
-      {/* Large Screens: Show all three items */}
+      {/* Large/XL Screens: Cycle through 3 items */}
       {screenSize === "large" && (
         <div className="w-full flex justify-between">
-          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">{items[0]}</p>
-          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">{items[1]}</p>
-          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">{items[2]}</p>
+          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">
+            {items[currentIndex]}
+          </p>
+          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">
+            {items[(currentIndex + 1) % items.length]}
+          </p>
+          <p className="text-2xl lg:text-4xl tracking-wide w-1/3">
+            {items[(currentIndex + 2) % items.length]}
+          </p>
         </div>
       )}
 
-      {/* Medium Screens: Show 2 cycling items */}
+      {/* Medium Screens: Cycle through 2 items */}
       {screenSize === "medium" && (
         <div className="w-full flex justify-between">
-          <p className="text-2xl lg:text-4xl tracking-wide w-1/2">{items[currentIndex]}</p>
-          <p className="text-2xl lg:text-4xl tracking-wide w-1/2">{items[(currentIndex + 1) % items.length]}</p>
+          <p className="text-2xl lg:text-4xl tracking-wide w-1/2">
+            {items[currentIndex]}
+          </p>
+          <p className="text-2xl lg:text-4xl tracking-wide w-1/2">
+            {items[(currentIndex + 1) % items.length]}
+          </p>
         </div>
       )}
 
-      {/* Small Screens: Show 1 cycling item */}
+      {/* Small Screens: Cycle through 1 item */}
       {screenSize === "small" && (
         <p className="animate-fade text-2xl lg:text-4xl tracking-wide w-full text-center">
           {items[currentIndex]}
