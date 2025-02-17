@@ -2,7 +2,7 @@ import React from 'react'
 import NavbarLogo from './NavbarLogo'
 import NavbarLinks from './NavbarLinks';
 import NavbarBtn from './NavbarBtn'
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxHamburgerMenu } from 'react-icons/rx';
 import {useState} from "react"
 
 function NavbarMain() {
