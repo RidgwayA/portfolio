@@ -9,6 +9,8 @@ import ProjectsMain from './componets/projectsSection/ProjectsMain'
 import ContactMain from './componets/contactSection/ContactMain'
 import SectionFooter from './componets/footer/SectionFooter'
 import FinalFooter from './componets/footer/FinalFooter'
+import { Analytics } from '@vercel/analytics/react';
+
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
   <SectionFooter/>
   <ContactMain/>
   <FinalFooter/>
+
+  <Analytics/> 
 </main>
   )
 }
