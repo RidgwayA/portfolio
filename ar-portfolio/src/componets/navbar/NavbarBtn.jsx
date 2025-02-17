@@ -1,5 +1,5 @@
-import React from "react";
-import { GoArrowDownRight } from "react-icons/go";
+import React from 'react';
+import { GoArrowDownRight } from 'react-icons/go';
 
 function NavbarBtn() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { RiPentagonLine } from "react-icons/ri";
+import { RiPentagonLine } from 'react-icons/ri';
 
 const HeroImg = () => {
   return (

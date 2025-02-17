@@ -1,8 +1,6 @@
-// src/components/navbar/NavbarLinks.jsx
 
 import React from 'react';
 
-// ✅ EXPORT THE LINKS ARRAY
 export const links = [
   { link: "About Me", section: "about" },
   { link: "Skills", section: "skills" },
