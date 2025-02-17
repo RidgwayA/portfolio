@@ -9,7 +9,7 @@ const HeroImg = () => {
         <RiPentagonLine className="h-[500px] w-[500px] text-cyan animate-[spin_20s_linear_infinite] blur-lg opacity-50" />
       </div>
       <img
-        src="/public/images/me.png"
+        src="/images/me.png"
         alt="Austin Ridgway"
         className="max-h-[450px] w-auto relative"
       />
