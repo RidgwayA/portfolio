@@ -15,13 +15,19 @@ function AboutMeText() {
         the country as she worked as a travel CT tech, moving 10+ times with our
         two dogs, Nala and Max. While our nomadic lifestyle has been an
         adventure, we are now looking to settle down and build a more permanent
-        foundation. With experience in banking, rental property management, software
-        development, and IT infrastructure, I am eager to apply my skills in a
-        role that allows me to create meaningful and innovative technology
-        solutions.
+        foundation. With experience in banking, rental property management,
+        software development, and IT infrastructure, I am eager to apply my
+        skills in a role that allows me to create meaningful and innovative
+        technology solutions.
       </p>
-      <button className="px-4 py-2 mt-3 rounded-full text-xl font-bold text-black border-cyan border flex items-center gap-1 
-    bg-gradient-to-r from-cyan to-orange hover:border-orange hover:scale-110 transition-all duration-500 hover:shadow-myshadow">My Projects</button>
+      <a href="#projects">
+        <button
+          className="px-4 py-2 mt-3 rounded-full text-xl font-bold text-black border-cyan border flex items-center gap-1 
+    bg-gradient-to-r from-cyan to-orange hover:border-orange hover:scale-110 transition-all duration-500 hover:shadow-myshadow"
+        >
+          My Projects
+        </button>
+      </a>
     </div>
   );
 }

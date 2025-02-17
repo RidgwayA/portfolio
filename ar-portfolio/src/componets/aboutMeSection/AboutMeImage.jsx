@@ -6,7 +6,7 @@ function AboutMeImage() {
       <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
         <img
         //Remove and put actual image of me after new photos are taken
-          src="../../public/images/about-me.jpg"
+          src="/images/about-me.jpg"
           alt="About me img"
           className="h-full w-auto object-cover"
         ></img>

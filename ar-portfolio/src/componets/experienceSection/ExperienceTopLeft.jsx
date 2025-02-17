@@ -5,7 +5,8 @@ function ExperienceTopLeft() {
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[100px] rounded-tr-[20px] rounded-bl-[0px] absolute overflow-hidden">
         <img
-          src="../../public/images/experienceLightBulb.jpg"
+          src="/images/experienceLightbulb.jpg"
+          
           alt="About me img"
           className="h-full w-auto object-cover"
         ></img>
