@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const items = ["Quick Learner", "Team Player", "Detail Oriented", "Hard Worker", "Creative", "Problem Solver"];
 
-function HeroFooter() {
+function SectionFooter() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screenSize, setScreenSize] = useState("large");
 
@@ -71,4 +71,4 @@ function HeroFooter() {
   );
 }
 
-export default HeroFooter;
+export default SectionFooter;

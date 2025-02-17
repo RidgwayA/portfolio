@@ -65,3 +65,8 @@ body {
 .animate-fade {
   animation: fade 1s ease-in-out;
 }
+
+html {
+  scroll-padding-top: 125px; 
+  scroll-behavior: smooth; 
+}

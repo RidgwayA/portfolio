@@ -48,7 +48,7 @@ const experiences = [
 
 const ExperienceAll = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 w-full pb-[50px]">
       {experiences.map((experience, index) => (
         <div
           key={index}

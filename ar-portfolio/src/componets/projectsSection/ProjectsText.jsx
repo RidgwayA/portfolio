@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectsText() {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 w-full mt-[120px]">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 w-full ">
       <div className="flex flex-col w-full max-w-[600px] px-4 sm:px-2">
         <h2 className="text-6xl text-cyan text-center mb-6">Projects</h2>
         <h3 className="text-orange font-bold uppercase text-3xl font-body text-center mb-4">
