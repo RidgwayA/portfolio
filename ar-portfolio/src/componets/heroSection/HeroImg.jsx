@@ -1,9 +1,17 @@
 import React from "react";
-import { RiPentagonLine } from 'react-icons/ri';
+import { RiPentagonLine } from "react-icons/ri";
+import { motion } from "framer-motion";
+import { fadeIn } from "../framerMotion/variants";
 
 const HeroImg = () => {
   return (
-    <div className="relative h-full flex items-center justify-center overflow-hidden">
+    <motion.div
+      variants={fadeIn("left", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.2 }}
+      className="relative h-full flex items-center justify-center overflow-hidden"
+    >
       {/* Pentagon Positioned Behind Image Without Affecting Layout */}
       <div className="absolute inset-0 flex justify-center items-center -z-10 pointer-events-none">
         <RiPentagonLine className="h-[500px] w-[500px] text-cyan animate-[spin_20s_linear_infinite] blur-lg opacity-50" />
@@ -13,7 +21,7 @@ const HeroImg = () => {
         alt="Austin Ridgway"
         className="max-h-[450px] w-auto relative"
       />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const GRID_SIZE = 32;
 const NUM_DOTS = 15;
@@ -19,12 +19,17 @@ const generateDots = () => {
     const col = Math.floor(Math.random() * cols) * GRID_SIZE;
     const row = Math.floor(Math.random() * rows) * GRID_SIZE;
 
-    const gridTravelDistance = Math.floor(
-      Math.random() * (MAX_GRID_TRAVEL - MIN_GRID_TRAVEL + 1) + MIN_GRID_TRAVEL
-    ) * GRID_SIZE;
+    const gridTravelDistance =
+      Math.floor(
+        Math.random() * (MAX_GRID_TRAVEL - MIN_GRID_TRAVEL + 1) +
+          MIN_GRID_TRAVEL
+      ) * GRID_SIZE;
 
     // Ensure dots don’t move outside viewport height
-    const maxTravelDistance = Math.min(gridTravelDistance, screenHeight - row - GRID_SIZE);
+    const maxTravelDistance = Math.min(
+      gridTravelDistance,
+      screenHeight - row - GRID_SIZE
+    );
 
     return {
       id: Math.random().toString(36).substr(2, 9),
@@ -79,7 +84,7 @@ const HeroBackground = () => {
             delay: dot.delay,
             ease: "linear",
           }}
-          className="absolute bg-orange rounded-full"
+          className="absolute bg-white rounded-full"
           style={{
             width: `${dot.size}px`,
             height: `${dot.size}px`,

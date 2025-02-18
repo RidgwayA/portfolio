@@ -1,5 +1,7 @@
 import React from "react";
 import SingleExperience from "./SingleExperience";
+import { motion } from "framer-motion";
+import { fadeIn } from "../framerMotion/variants";
 
 const experiences = [
   {
@@ -50,12 +52,15 @@ const ExperienceAll = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 w-full pb-[50px]">
       {experiences.map((experience, index) => (
-        <div
-          key={index}
+        <motion.div
+          variants={fadeIn("down", index * 0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
           className="flex flex-col items-center rounded-lg overflow-hidden break-words text-left"
         >
           <SingleExperience experience={experience} />
-        </div>
+        </motion.div>
       ))}
     </div>
   );
