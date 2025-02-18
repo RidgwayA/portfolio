@@ -10,6 +10,8 @@ import { FaGitSquare } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
 import { GrDocker } from "react-icons/gr";
 import SkillSingle from "./SkillSingle";
+import { motion } from "framer-motion";
+import { fadeIn } from "../framerMotion/variants";
 
 const skills = [
   {
@@ -59,7 +61,16 @@ function SkillMulti() {
     <div>
       <div className="flex items-center justify-center relative gap-2 max-w-[1200px] mx-auto">
         {skills.map((item, index) => {
-          return <SkillSingle key={index} text={item.skill} imgSvg={item.icon}/>
+          return (
+            <motion.div
+              variants={fadeIn("up", index * 0.15)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <SkillSingle key={index} text={item.skill} imgSvg={item.icon} />
+            </motion.div>
+          );
         })}
       </div>
     </div>

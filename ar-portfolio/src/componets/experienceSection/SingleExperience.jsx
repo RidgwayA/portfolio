@@ -8,7 +8,9 @@ function SingleExperience({ experience }) {
       <p className="text-cyan mb-2">{experience.date}</p>
       <ul className="list-disc mt-4 pl-4 text-white flex flex-col items-start">
         {experience.responsibilities.map((responsibility, index) => (
-          <li key={index} className="text-lg">{responsibility}</li>
+          <li key={index} className="text-lg">
+            {responsibility}
+          </li>
         ))}
       </ul>
     </div>
@@ -16,4 +18,3 @@ function SingleExperience({ experience }) {
 }
 
 export default SingleExperience;
-

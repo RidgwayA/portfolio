@@ -1,17 +1,27 @@
-import React from 'react';
-import { GoArrowDownRight } from 'react-icons/go';
+import React from "react";
+import { GoArrowDownRight } from "react-icons/go";
+import { track } from "@vercel/analytics";
 
 function NavbarBtn() {
+  const handleDownload = () => {
+    track("resume_download", { page: "Navbar" });
+    const link = document.createElement("a");
+    link.href = "/ARidgwayResume2025.pdf";
+    link.download = "ARidgwayResume2025.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <a href='#contact'>
     <button
+      onClick={handleDownload}
       className="px-4 py-2 rounded-full text-xl font-bold text-black border-cyan border flex items-center gap-1 
-    bg-gradient-to-r from-cyan to-orange hover:border-orange hover:scale-110 transition-all duration-500 hover:shadow-myshadow"
+      bg-gradient-to-r from-cyan to-orange hover:border-orange hover:scale-110 transition-all duration-500 hover:shadow-myshadow"
     >
-      Hire Me
+      Resume
       <GoArrowDownRight />
     </button>
-    </a>
   );
 }
 

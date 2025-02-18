@@ -4,7 +4,10 @@ import AboutMeImage from "./AboutMeImage";
 
 function AboutMeMain() {
   return (
-    <div id="about" className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[120px] justify-between items-center mb-[120px]">
+    <div
+      id="about"
+      className="flex md:flex-row sm:flex-col gap-12 px-4 pb-10 max-w-[1200px] mx-auto mt-[120px] justify-between items-center mb-[120px]"
+    >
       <div>
         <AboutMeText />
       </div>

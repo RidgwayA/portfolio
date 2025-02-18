@@ -1,7 +1,7 @@
-import React from 'react';
-import SkillText from './SkillText';
-import SkillMulti from './SkillMulti';
-import SkillMultiSm from './SkillMultiSm';
+import React from "react";
+import SkillText from "./SkillText";
+import SkillMulti from "./SkillMulti";
+import SkillMultiSm from "./SkillMultiSm";
 
 function SkillMain() {
   return (
@@ -9,10 +9,10 @@ function SkillMain() {
       <div className="max-w-[1200px] px-4 mx-auto min-h-[600px] relative overflow-hidden">
         <SkillText />
         <div className="bottom-[50px] absolute left-[50%] -translate-x-[50%] lg:block sm:hidden">
-            <SkillMulti />
+          <SkillMulti />
         </div>
         <div className="sm:block lg:hidden">
-            <SkillMultiSm />
+          <SkillMultiSm />
         </div>
       </div>
     </div>

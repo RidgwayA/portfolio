@@ -59,8 +59,12 @@ function SkillMultiSm() {
       {skills.map((item, index) => {
         return (
           <div key={index} className="flex flex-col items-center ">
-            {React.cloneElement(item.icon, { className: "text-7xl text-orange" })}
-            <p className="text-center text-orange text-3xl mt-4">{item.skill}</p>
+            {React.cloneElement(item.icon, {
+              className: "text-7xl text-orange",
+            })}
+            <p className="text-center text-orange text-3xl mt-4">
+              {item.skill}
+            </p>
           </div>
         );
       })}

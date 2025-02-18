@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../framerMotion/variants";
 
 function SkillText() {
   return (
-    <div className="flex flex-col items-center mt-[100px]">
+    <motion.div
+      variants={fadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.2 }}
+      className="flex flex-col items-center mt-[100px]"
+    >
       <h2 className="text-6xl text-cyan mb-10">My Skills</h2>
       <p className="text-2xl text-center text-white">
         As an entry-level developer with a strong foundation in Java, Python,
@@ -14,7 +22,7 @@ function SkillText() {
         apply my skills in web development, database management, and cloud
         computing while continuously learning and growing as a developer.
       </p>
-    </div>
+    </motion.div>
   );
 }
 
