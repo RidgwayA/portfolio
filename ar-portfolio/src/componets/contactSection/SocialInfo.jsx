@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function SocialInfo({ Icon, link }) {
   return (
@@ -9,5 +9,10 @@ function SocialInfo({ Icon, link }) {
     </div>
   );
 }
+
+SocialInfo.propTypes = {
+  Icon: PropTypes.elementType.isRequired,  // the icon component
+  link: PropTypes.string.isRequired,       // the URL string
+};
 
 export default SocialInfo;

@@ -1,4 +1,3 @@
-import React from "react";
 import { RiPentagonLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variants";

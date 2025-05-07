@@ -1,4 +1,3 @@
-import React from "react";
 import SkillText from "./SkillText";
 import SkillMulti from "./SkillMulti";
 import SkillMultiSm from "./SkillMultiSm";

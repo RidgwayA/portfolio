@@ -1,5 +1,3 @@
-import React from "react";
-
 function SkillFooter() {
   return (
     <div className="border-y-2 border-black opacity-50 relative">

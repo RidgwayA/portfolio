@@ -1,4 +1,3 @@
-import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { FaMapLocationDot } from "react-icons/fa6";

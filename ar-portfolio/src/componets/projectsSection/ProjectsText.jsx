@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variants";
 
@@ -39,7 +38,7 @@ function ProjectsText() {
           </p>
           <p className="text-white text-xl md:text-2xl leading-relaxed p-[50px]">
             With 3 years of hands-on experience during my software development
-            studies, I've completed 10+ projects, including building 2 Android
+            studies, I&apos;ve completed 10+ projects, including building 2 Android
             apps, developing 5+ websites with database interactions, creating a
             SQL database, and deploying projects using Docker. A few of these
             are displayed below.

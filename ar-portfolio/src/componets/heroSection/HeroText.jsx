@@ -1,4 +1,3 @@
-import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variants";

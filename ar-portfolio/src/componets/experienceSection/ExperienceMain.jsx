@@ -1,4 +1,3 @@
-import React from "react";
 import ExperienceText from "./ExperienceText";
 import ExperienceTop from "./ExperienceTop";
 import ExperienceAll from "./ExperienceAll";

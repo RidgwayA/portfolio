@@ -1,14 +1,8 @@
-import React from "react";
 
-export const links = [
-  { link: "About Me", section: "about" },
-  { link: "Skills", section: "skills" },
-  { link: "Experience", section: "experience" },
-  { link: "Projects", section: "projects" },
-  { link: "Contact", section: "contact" },
-];
+import PropTypes from "prop-types";
+import { links } from "./links";
 
-function NavbarLinks({ closeMenu }) {
+export default function NavbarLinks({ closeMenu }) {
   return (
     <ul className="flex gap-6 text-white font-bold text-center lg:flex-row sm:flex-col lg:relative sm:absolute sm:top-[120%] left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-cyan/30 backdrop-blur-lg lg:bg-black sm:w-full py-4">
       {links.map((link, index) => (
@@ -20,11 +14,13 @@ function NavbarLinks({ closeMenu }) {
           >
             {link.link}
           </a>
-          <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
+          <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500" />
         </li>
       ))}
     </ul>
   );
 }
 
-export default NavbarLinks;
+NavbarLinks.propTypes = {
+  closeMenu: PropTypes.func.isRequired,
+};
