@@ -1,4 +1,4 @@
-import React from "react";
+
 import SingleExperience from "./SingleExperience";
 import { motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variants";
@@ -53,6 +53,7 @@ const ExperienceAll = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 w-full pb-[50px]">
       {experiences.map((experience, index) => (
         <motion.div
+        key={index}
           variants={fadeIn("down", index * 0.5)}
           initial="hidden"
           whileInView="show"

@@ -1,4 +1,3 @@
-import React from "react";
 import SocialInfo from "./SocialInfo";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

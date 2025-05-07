@@ -1,5 +1,4 @@
-import React from "react";
-import { links } from "../navbar/NavbarLinks";
+import { links } from "../navbar/links";  
 
 function FinalFooter() {
   return (

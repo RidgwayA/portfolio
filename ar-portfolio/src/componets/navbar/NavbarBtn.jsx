@@ -1,4 +1,4 @@
-import React from "react";
+
 import { GoArrowDownRight } from "react-icons/go";
 import { track } from "@vercel/analytics";
 

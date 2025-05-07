@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function SkillSingle({ imgSvg, text }) {
   return (
@@ -13,5 +13,10 @@ function SkillSingle({ imgSvg, text }) {
     </div>
   );
 }
+
+SkillSingle.propTypes = {
+  imgSvg: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default SkillSingle;

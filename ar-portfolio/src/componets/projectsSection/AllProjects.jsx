@@ -1,4 +1,3 @@
-import React from "react";
 import SingleProject from "./SingleProject";
 import { motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variants";
@@ -11,7 +10,8 @@ const projects = [
     alignment: "right",
     description: "WGU Capstone project",
     image: "/images/dumbbell.png",
-    link: "#",
+    gitLink: "https://github.com/RidgwayA/easy-workout-planner",
+    liveLink:"https://aridgw1.itch.io/easy-workout-planner",
   },
   {
     name: "Bakery Website",
@@ -20,7 +20,8 @@ const projects = [
     alignment: "left",
     description: "Client website",
     image: "/images/muffin.png",
-    link: "#",
+    gitLink: "#",
+    liveLink:"#",
   },
   {
     name: "Vacation Planning App",
@@ -29,7 +30,8 @@ const projects = [
     alignment: "right",
     description: "WGU Android project",
     image: "/images/plane.png",
-    link: "#",
+    gitLink: "https://github.com/RidgwayA/Ridgway-Vacation-Planner-D308",
+    liveLink:"#",
   },
   //   {
   //     name: "Test",

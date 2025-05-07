@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function ExperienceInfo({ number, text }) {
   return (
@@ -8,5 +8,10 @@ function ExperienceInfo({ number, text }) {
     </div>
   );
 }
+
+ExperienceInfo.propTypes = {
+  number: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default ExperienceInfo;

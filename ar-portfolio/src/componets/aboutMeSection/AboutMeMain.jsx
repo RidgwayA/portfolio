@@ -1,4 +1,3 @@
-import React from "react";
 import AboutMeText from "./AboutMeText";
 import AboutMeImage from "./AboutMeImage";
 

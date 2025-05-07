@@ -1,16 +1,24 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function SingleProject({ project }) {
   if (!project) return null;
 
-  const { name, type, status, description, image, link } = project;
+  const {
+    name,
+    type,
+    status,
+    description,
+    image,
+    gitLink,
+    liveLink,
+  } = project;
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-6">
       <div className="w-[250px] md:w-[250px]">
         <img
-          src={project.image}
-          alt={project.name}
+          src={image}
+          alt={name}
           className="w-full h-64 object-cover rounded-lg"
         />
       </div>
@@ -20,17 +28,43 @@ function SingleProject({ project }) {
           {type} • {status}
         </p>
         <p className="text-white text-base mb-4">{description}</p>
+
+        {/* GitHub link always shown */}
         <a
-          href={link}
+          href={gitLink}
           target="_blank"
           rel="noopener noreferrer"
           className="text-cyan font-bold hover:underline"
         >
-          View Project →
+          View Project Git Repo →
         </a>
+
+        {/* only render the live link if it's truthy and not just "#" */}
+        {liveLink && liveLink !== "#" && (
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan font-bold hover:underline mt-2 block"
+          >
+            View Live Demo →
+          </a>
+        )}
       </div>
     </div>
   );
 }
+
+SingleProject.propTypes = {
+  project: PropTypes.shape({
+    name:        PropTypes.string.isRequired,
+    type:        PropTypes.string.isRequired,
+    status:      PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image:       PropTypes.string.isRequired,
+    gitLink:     PropTypes.string.isRequired,
+    liveLink:    PropTypes.string,
+  }).isRequired,
+};
 
 export default SingleProject;
