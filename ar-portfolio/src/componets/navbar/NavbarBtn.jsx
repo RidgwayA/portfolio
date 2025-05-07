@@ -6,8 +6,8 @@ function NavbarBtn() {
   const handleDownload = () => {
     track("resume_download", { page: "Navbar" });
     const link = document.createElement("a");
-    link.href = "/images/ARidgwayResume2025.pdf";
-    link.download = "ARidgwayResume2025.pdf";
+    link.href = "/images/Austin-Ridgway-Resume.pdf";
+    link.download = "Austin-Ridgway-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
