@@ -20,8 +20,8 @@ const projects = [
     alignment: "left",
     description: "Client website",
     image: "/images/muffin.png",
-    gitLink: "#",
-    liveLink:"#",
+    gitLink: "https://github.com/RidgwayA/ac-boutique",
+    liveLink:"https://ac-botique.vercel.app/",
   },
   {
     name: "Vacation Planning App",
